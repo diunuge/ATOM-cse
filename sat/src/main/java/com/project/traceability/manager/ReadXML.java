@@ -1,7 +1,9 @@
 package com.project.traceability.manager;
 
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import com.project.traceability.db.GraphDB;
 import com.project.traceability.model.ArtefactElement;
@@ -12,7 +14,6 @@ public class ReadXML {
 	public static void main(String argv[]) {
 	
 		try {
-			
 			SourceCodeArtefactManager.readXML();
 			UMLArtefactManager.readXML();		
 			
@@ -23,13 +24,14 @@ public class ReadXML {
 	        graphDB.initiateGraphDB();
 	        graphDB.addNodeToGraphDB(sourceCodeAretefactElements);
 		    graphDB.addNodeToGraphDB(UMLAretefactElements);
-		   // graphDB.drawGraph();
+		  
 	        
 	        //SourceCodeArtefactManager.manageArtefactSubElements();
 			List<String> relationNodes = ClassCompareManager.compareClassNames();
 			//List<String> relationNodes = ClassCompareManager.relationNodes;
 			graphDB.addRelationTOGraphDB(relationNodes);
-			//graphDB.drawGraph();
+			graphDB.setVisible(true);
+			
 			
 			//List<String> relationNodes = ClassCompareManager.compareClassNames();
 			relationNodes.addAll(AttributeManager.mapAttributes());

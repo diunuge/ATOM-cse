@@ -35,7 +35,7 @@ public class SourceCodeArtefactManager {
 
 	public static void readXML() {
 		File sourceXmlFile = new File(
-				"F:\\Computer\\Semester 7\\R & D Project\\Product overview documents\\SourceCodeArtefactFile.xml");
+				"E:\\Uni\\Semi-7\\RnD\\Product overview documents\\SourceCodeArtefactFile.xml");
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder;
 		try {

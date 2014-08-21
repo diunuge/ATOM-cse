@@ -31,7 +31,7 @@ public class RequirementsManger {
 	public static void readXML() {
 		// get the xml file
 		File umlXmlFile = new File(
-				"F:\\Computer\\Semester 7\\R & D Project\\Product overview documents\\RequirementArtefactFile.xml");
+				"E:\\Uni\\Semi-7\\RnD\\Product overview documents\\RequirementArtefactFile.xml");
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder;
 		try {

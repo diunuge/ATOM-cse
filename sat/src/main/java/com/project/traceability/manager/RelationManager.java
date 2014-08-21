@@ -64,7 +64,7 @@ public class RelationManager {
 			DOMSource domSource = new DOMSource(document);
 			StreamResult streamResult = new StreamResult(
 					new File(
-							"F:\\Computer\\Semester 7\\R & D Project\\Product overview documents\\createFile.xml"));
+							"E:\\Uni\\Semi-7\\RnD\\Product overview documents\\createFile.xml"));
 			transformer.setOutputProperty(OutputKeys.INDENT, "yes");
 			transformer.setOutputProperty(OutputKeys.METHOD, "xml");
 			transformer.setOutputProperty("{http://xml.apache.org/xslt}indent-amount", "4");

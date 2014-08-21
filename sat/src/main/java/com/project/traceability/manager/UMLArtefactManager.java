@@ -38,7 +38,7 @@ public class UMLArtefactManager {
 	 */
 	public static void readXML(){
 		//get the xml file
-		File umlXmlFile = new File("F:\\Computer\\Semester 7\\R & D Project\\Product overview documents\\UMLArtefactFile.xml"); 	
+		File umlXmlFile = new File("E:\\Uni\\Semi-7\\RnD\\Product overview documents\\UMLArtefactFile.xml"); 	
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder;
 		try {

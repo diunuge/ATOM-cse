@@ -1,8 +1,11 @@
 package com.project.traceability.db;
 
 import java.awt.EventQueue;
+import java.awt.Frame;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -15,21 +18,24 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.border.EmptyBorder;
 
-import org.neo4j.cypher.javacompat.ExecutionEngine;
-import org.neo4j.cypher.javacompat.ExecutionResult;
-import org.neo4j.graphdb.DynamicLabel;
-import org.neo4j.graphdb.GraphDatabaseService;
-import org.neo4j.graphdb.Label;
-import org.neo4j.graphdb.Node;
-import org.neo4j.graphdb.Relationship;
-import org.neo4j.graphdb.RelationshipType;
-import org.neo4j.graphdb.Transaction;
+import org.neo4j.graphdb.*;
 import org.neo4j.graphdb.factory.GraphDatabaseFactory;
 import org.neo4j.graphdb.factory.GraphDatabaseSettings;
+import org.neo4j.graphdb.index.Index;
+import org.neo4j.graphdb.index.IndexHits;
+import org.neo4j.graphdb.index.IndexManager;
 import org.neo4j.graphdb.index.ReadableIndex;
-
+import org.neo4j.cypher.javacompat.ExecutionEngine;
+import org.neo4j.cypher.javacompat.ExecutionResult;
+import org.neo4j.graphdb.GraphDatabaseService;
+import org.neo4j.graphdb.Relationship;
+import org.neo4j.graphdb.Transaction;
+import org.neo4j.graphdb.DynamicLabel;
 import com.project.traceability.model.ArtefactElement;
 import com.project.traceability.model.ArtefactSubElement;
+import com.project.traceability.model.AttributeModel;
+import com.project.traceability.model.MethodModel;
+import com.project.traceability.model.ParameterModel;
 
 /**
  * Model to add data to graph DB and visualize it.
@@ -38,11 +44,6 @@ import com.project.traceability.model.ArtefactSubElement;
  * 
  */
 public class GraphDB extends JFrame {
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
 
 	/**
 	 * Define relationship type.
@@ -121,17 +122,12 @@ public class GraphDB extends JFrame {
 
 	public void initiateGraphDB() {
 
-		graphDb = new GraphDatabaseFactory()
-				.
-				// .newEmbeddedDatabase("C:\\Users\\Thanu\\Documents\\Neo4j\\atomdb.graphdb")
-				newEmbeddedDatabaseBuilder(
-						"D:\\Neo4j Community\\atomdb.graphdb")
-				.setConfig(GraphDatabaseSettings.node_keys_indexable, "NODE_ID")
-				.setConfig(GraphDatabaseSettings.node_auto_indexing, "true")
+		graphDb = new GraphDatabaseFactory().newEmbeddedDatabaseBuilder(
+				"C:\\Users\\Thanu\\Documents\\Neo4j\\atomdb.graphdb")
 				.newGraphDatabase();
 		Transaction tx = graphDb.beginTx();
 		try {
-			cleanUp(graphDb);
+			// cleanUp(graphDb);
 			tx.success();
 
 		} finally {
@@ -143,14 +139,9 @@ public class GraphDB extends JFrame {
 	public void addNodeToGraphDB(Map<String, ArtefactElement> aretefactElements) {
 		Transaction tx = graphDb.beginTx();
 		try {
-			
+
 			Iterator<Entry<String, ArtefactElement>> iterator = aretefactElements
 					.entrySet().iterator();
-			// graphDb.schema()
-			// .constraintFor(
-			// DynamicLabel.label(iterator.next().getValue()
-			// .getType()))
-			// .assertPropertyIsUnique("NODE_ID").create();
 
 			while (iterator.hasNext()) {
 
@@ -159,39 +150,102 @@ public class GraphDB extends JFrame {
 						.getValue();
 				Label myLabel = DynamicLabel.label(artefactElement.getType());
 
-				Node n = graphDb.createNode();
-				// IndexManager index = graphDb.index();
-				// Index<Node> artefacts = index.forNodes("Artefacts ID");
-				n.addLabel(myLabel);
-				n.setProperty("NODE_ID", artefactElement.getArtefactElementId());
-				n.setProperty("Name", artefactElement.getName());
-				n.setProperty("Type", artefactElement.getType());
-				// artefacts.add(n, "ID", n.getProperty("ID"));
-				List<ArtefactSubElement> artefactsSubElements = artefactElement
-						.getArtefactSubElements();
-				for (int i = 0; i < artefactsSubElements.size(); i++) {
-					Node m = graphDb.createNode();
-					myLabel = DynamicLabel.label(artefactsSubElements.get(i)
-							.getType());
-					m.addLabel(myLabel);
-					m.setProperty("NODE_ID", artefactsSubElements.get(i)
-							.getSubElementId());
-					m.setProperty("Name", artefactsSubElements.get(i).getName());
-					m.setProperty("Type", artefactsSubElements.get(i).getType());
-					if (null != artefactsSubElements.get(i).getVisibility()) {
-						m.setProperty("Visibility", artefactsSubElements.get(i)
-								.getVisibility());
-					}
-					if (null != artefactsSubElements.get(i).getReturnType()) {
-						m.setProperty("Return Type", artefactsSubElements
-								.get(i).getReturnType());
-					}
-					relationship = n.createRelationshipTo(m,
-							RelTypes.SUB_ELEMENT);
-					relationship.setProperty("message",
-							RelTypes.SUB_ELEMENT.getValue());
-				}
+				IndexManager index = graphDb.index();
+				Index<Node> artefacts = index.forNodes("ArtefactElement");
 
+				IndexHits<Node> hits = artefacts.get("ID",
+						artefactElement.getArtefactElementId());
+				Node node = hits.getSingle();
+				if (node == null) {
+					Node n = graphDb.createNode();
+					n.addLabel(myLabel);
+					n.setProperty("ID", artefactElement.getArtefactElementId());
+					n.setProperty("Name", artefactElement.getName());
+					n.setProperty("Type", artefactElement.getType());
+					artefacts.add(n, "ID", n.getProperty("ID"));
+					List<ArtefactSubElement> artefactsSubElements = artefactElement
+							.getArtefactSubElements();
+
+					for (int i = 0; i < artefactsSubElements.size(); i++) {
+						Node m = graphDb.createNode();
+						ArtefactSubElement temp = artefactsSubElements.get(i);
+						myLabel = DynamicLabel.label(temp.getType());
+						m.addLabel(myLabel);
+						m.setProperty("ID", temp.getSubElementId());
+						m.setProperty("Name", temp.getName());
+						m.setProperty("Type", temp.getType());
+						if (null != temp.getVisibility()) {
+							m.setProperty("Visibility", temp.getVisibility());
+						}
+						if (temp.getType().equalsIgnoreCase("UMLOperation")
+								|| temp.getType().equalsIgnoreCase("Method")) {
+							MethodModel mtemp = (MethodModel) temp;
+							if (null != mtemp.getReturnType()) {
+								m.setProperty("Return Type",
+										mtemp.getReturnType());
+							}
+							if (null != mtemp.getParameters()) {
+								List<ParameterModel> params = mtemp
+										.getParameters();
+								String parameters = "";
+								for (int p = 0; p < params.size(); p++) {
+									parameters += params.get(p).getName() + ":"
+											+ params.get(p).getVariableType();
+									if (p < params.size() - 1)
+										parameters += ",";
+								}
+								m.setProperty("Parameters", parameters);
+							}
+							if(null != mtemp.getContent()){
+								m.setProperty("Content",
+										mtemp.getContent());
+							}
+						} else if (temp.getType().equalsIgnoreCase(
+								"UMLAttribute")
+								|| temp.getType().equalsIgnoreCase("Field")) {
+							AttributeModel mtemp = (AttributeModel) temp;
+							if (null != mtemp.getVariableType()) {
+								m.setProperty("Variable Type",
+										mtemp.getVariableType());
+							}
+
+						}
+						relationship = n.createRelationshipTo(m,
+								RelTypes.SUB_ELEMENT);
+						relationship.setProperty("message",
+								RelTypes.SUB_ELEMENT.getValue());
+					}
+				} else {
+					if (!node.getProperty("Name").equals(
+							artefactElement.getName())) {
+						System.out.println("Node name updated");
+					} else if (!node.getProperty("Type").equals(
+							artefactElement.getType())) {
+						System.out.println("Node type updated");
+					} else {
+						Iterator<Relationship> relations = node
+								.getRelationships(RelTypes.SUB_ELEMENT)
+								.iterator();
+						List<ArtefactSubElement> artefactsSubElements = artefactElement
+								.getArtefactSubElements();
+
+						while (relations.hasNext()) {
+							Node test = relations.next().getOtherNode(node);
+							for (int i = 0; i < artefactsSubElements.size(); i++) {
+								if (test.getProperty("ID").equals(
+										artefactsSubElements.get(i)
+												.getSubElementId())) {
+									System.out
+											.println("SubElement already exists.....");
+									break;
+								}
+								// System.out.println(test.getProperty("ID")+" "+artefactsSubElements
+								// .get(i).getSubElementId());
+							}
+						}
+						System.out.println("Node already exists.....");
+					}
+				}
 			}
 			tx.success();
 
@@ -203,57 +257,35 @@ public class GraphDB extends JFrame {
 	public void addRelationTOGraphDB(List<String> relation) {
 		Transaction tx = graphDb.beginTx();
 		try {
-			// IndexManager index = graphDb.index();
-			// Index<Node> artefacts = index.forNodes("Artefacts ID");
+			IndexManager index = graphDb.index();
+			Index<Node> artefacts = index.forNodes("ArtefactElement");
 
-			// Get the Node auto index
-			ReadableIndex<Node> autoNodeIndex = graphDb.index()
-					.getNodeAutoIndexer().getAutoIndex();
 			for (int i = 0; i < relation.size(); i++) {
-				// IndexHits<Node> hits = artefacts.get("ID", relation.get(i));
-				// Node source = hits.getSingle();//
-				// IteratorUtil.firstOrNull(hits);//
-				// hits.getSingle();
+				IndexHits<Node> hits = artefacts.get("ID", relation.get(i));
+				Node source = hits.getSingle();
+				hits = artefacts.get("ID", relation.get(++i));
+				Node target = hits.getSingle();
 
-				/*System.out.println("Nodes: "
-						+ autoNodeIndex.get("NODE_ID", relation.get(i)).size());*/
-				Node source = autoNodeIndex.get("NODE_ID", relation.get(i))
-						.getSingle();
-
-				// hits = artefacts.get("ID", relation.get(++i));
-				// Node target = hits.getSingle();
-				/*System.out
-						.println("Nodes: "
-								+ relation.get(++i).toString()
-								+ " "
-								+ +autoNodeIndex
-										.get("NODE_ID", relation.get(i)).size());*/
-
-				Node target = autoNodeIndex.get("NODE_ID", relation.get(i))
-						.getSingle();
-
-				relationship = source.createRelationshipTo(target,
-						RelTypes.SOURCE_TO_TARGET);
-				relationship.setProperty("message",
-						RelTypes.SOURCE_TO_TARGET.getValue());
+				Iterator<Relationship> relations = source.getRelationships()
+						.iterator();
+				boolean exist = false;
+				while (relations.hasNext()) {
+					if (relations.next().getOtherNode(source).equals(target)) {
+						exist = true;
+						System.out.println("Relationship already exists.....");
+					}
+				}
+				if (!exist) {
+					relationship = source.createRelationshipTo(target,
+							RelTypes.SOURCE_TO_TARGET);
+					relationship.setProperty("message",
+							RelTypes.SOURCE_TO_TARGET.getValue());
+				}
 			}
 			tx.success();
 		} finally {
 			tx.finish();
 		}
-	}
-
-	public void drawGraph() {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					GraphDB frame = new GraphDB();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
 	}
 
 	private static void registerShutdownHook(final GraphDatabaseService graphDb) {
@@ -266,23 +298,15 @@ public class GraphDB extends JFrame {
 				graphDb.shutdown();
 			}
 		});
-		// Runtime.getRuntime().addShutdownHook(new Thread() {
-		// @Override
-		// public void run() {
-		// graphDb.shutdown();
-		// // try {
-		// // FileUtils.deleteRecursively(new
-		// // File("C:\\Users\\Thanu\\Documents\\Neo4j\\atomdb.graphdb"));
-		// // } catch (IOException e) {
-		// // e.printStackTrace();
-		// // }
-		// }
-		// });
 	}
 
 	@SuppressWarnings("deprecation")
 	public void cleanUp(final GraphDatabaseService graphDb) {
-		// final Index<Node> nodeIndex) {
+		// ReadableIndex<Node> autoNodeIndex = graphDb.index()
+		// .getNodeAutoIndexer().getAutoIndex();
+		IndexManager index = graphDb.index();
+		Index<Node> actors = index.forNodes("ArtefactElement");
+		actors.delete();
 		for (Node node : graphDb.getAllNodes()) {
 			for (Relationship rel : node.getRelationships()) {
 				rel.delete();
@@ -329,11 +353,10 @@ public class GraphDB extends JFrame {
 		btnNewButton_2.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
-				//graphDb = new EmbeddedGraphDatabase("D:\\Neo4j Community\\atomdb.graphdb");
-				registerShutdownHook(graphDb);
+
 				ExecutionEngine engine = new ExecutionEngine(graphDb);
 				ExecutionResult result = engine.execute(queryTextArea.getText());
-				String rows = null;
+				String rows = "";
 				for (Map<String, Object> row : result) {
 					for (Entry<String, Object> column : row.entrySet()) {
 						rows += column.getKey() + ": " + column.getValue()
