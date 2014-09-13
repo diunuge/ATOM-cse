@@ -9,7 +9,7 @@ import java.util.Map.Entry;
 import com.project.traceability.model.ArtefactElement;
 import com.project.traceability.model.ArtefactSubElement;
 
-public class ClassCompareManager {
+public class UMLSourceClassManager {
 
 	List<String> sourceCodeClasses = new ArrayList<String>();
 	List<String> UMLClasses = new ArrayList<String>();

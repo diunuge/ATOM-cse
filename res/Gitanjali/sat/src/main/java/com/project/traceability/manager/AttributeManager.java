@@ -15,7 +15,7 @@ public class AttributeManager {
 
 	static List<String> relationNodes = new ArrayList<String>();
 	static Map<ArtefactElement, List<? extends ArtefactSubElement>> sourceCodeSubArtefacts = SourceCodeArtefactManager
-			.manageArtefactSubElements(ArtefactSubElementType.ATTRIBUTE);
+			.manageArtefactSubElements(ArtefactSubElementType.ATTRIBUTE);			//get read source code attribute artifacts
 	static Map<ArtefactElement, List<ArtefactSubElement>> UMLSubArtefacts = UMLArtefactManager
 			.manageArtefactSubElements(ArtefactSubElementType.ATTRIBUTE);
 

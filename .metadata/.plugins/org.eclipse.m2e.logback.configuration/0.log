@@ -27,3 +27,865 @@
 2014-08-21 16:33:05,102 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
 2014-08-21 16:33:05,103 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2014-08-21 16:33:05,104 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 21:33:56,860 [Worker-1] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|http://repo1.maven.org/maven2
+2014-08-21 21:34:12,542 [Worker-1] ERROR o.e.m.c.i.i.nexus.NexusIndexManager - Unable to update index for central|http://repo1.maven.org/maven2
+java.io.IOException: Connect times out
+	at org.eclipse.m2e.core.internal.index.nexus.AsyncFetcher$PipedErrorInputStream.checkError(AsyncFetcher.java:251) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.AsyncFetcher$PipedErrorInputStream.read(AsyncFetcher.java:257) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at java.io.PipedInputStream.read(PipedInputStream.java:378) ~[na:1.7.0_25]
+	at java.io.InputStream.read(InputStream.java:101) ~[na:1.7.0_25]
+	at java.util.Properties$LineReader.readLine(Properties.java:434) ~[na:1.7.0_25]
+	at java.util.Properties.load0(Properties.java:353) ~[na:1.7.0_25]
+	at java.util.Properties.load(Properties.java:341) ~[na:1.7.0_25]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.downloadIndexProperties(DefaultIndexUpdater.java:457) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.access$100(DefaultIndexUpdater.java:75) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater$IndexAdaptor.setProperties(DefaultIndexUpdater.java:607) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:788) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:135) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.updateRemoteIndex(NexusIndexManager.java:1124) [org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.updateIndex(NexusIndexManager.java:1081) [org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager$1.run(NexusIndexManager.java:658) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.IndexUpdaterJob.run(IndexUpdaterJob.java:71) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54) ~[org.eclipse.core.jobs_3.5.100.v20110404.jar:na]
+Caused by: java.net.ConnectException: Connect times out
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.doConnect(NettyAsyncHttpProvider.java:853) ~[async-http-client-1.6.3.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.execute(NettyAsyncHttpProvider.java:731) ~[async-http-client-1.6.3.jar:na]
+	at com.ning.http.client.AsyncHttpClient.executeRequest(AsyncHttpClient.java:484) ~[async-http-client-1.6.3.jar:na]
+	at com.ning.http.client.SimpleAsyncHttpClient.execute(SimpleAsyncHttpClient.java:285) ~[async-http-client-1.6.3.jar:na]
+	at com.ning.http.client.SimpleAsyncHttpClient.get(SimpleAsyncHttpClient.java:202) ~[async-http-client-1.6.3.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.AsyncFetcher.retrieve(AsyncFetcher.java:203) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.downloadIndexProperties(DefaultIndexUpdater.java:452) ~[indexer-core-3.1.0.jar:3.1.0]
+	... 9 common frames omitted
+2014-08-21 21:46:59,930 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 21:46:59,931 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 21:46:59,934 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 21:46:59,934 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 21:50:34,182 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 21:50:34,182 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 21:50:34,184 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 21:50:34,184 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 21:52:24,376 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 21:52:24,376 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 21:52:24,378 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 21:52:24,378 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 21:59:56,407 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 21:59:56,407 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 21:59:56,409 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 21:59:56,409 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 22:01:48,488 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:01:48,488 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 22:01:48,489 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:01:48,490 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 22:06:26,274 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:06:26,275 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 22:06:26,276 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:06:26,276 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 22:10:04,692 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:10:04,692 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 22:10:04,694 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:10:04,694 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 22:12:24,726 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:12:24,726 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 22:12:24,730 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:12:24,730 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 22:19:49,956 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:19:49,956 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 22:19:49,957 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:19:49,957 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 22:21:20,168 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:21:20,168 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 22:21:20,170 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:21:20,170 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 22:23:17,611 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:23:17,611 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 22:23:17,612 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:23:17,612 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 22:23:36,014 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:23:36,015 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 22:23:36,017 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:23:36,018 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 22:24:07,165 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:24:07,166 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 22:24:07,167 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:24:07,167 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 22:24:49,998 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:24:49,999 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 22:24:50,000 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:24:50,000 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 22:25:51,505 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:25:51,505 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 22:25:51,507 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:25:51,507 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 22:30:54,907 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:30:54,908 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 22:30:54,910 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:30:54,911 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 22:42:47,762 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:42:47,762 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 22:42:47,764 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:42:47,764 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 22:43:50,197 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:43:50,198 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 22:43:50,199 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:43:50,200 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 22:50:16,863 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:50:16,882 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 22:50:16,883 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:50:16,884 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 22:51:24,369 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:51:24,369 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 22:51:24,371 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:51:24,371 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 22:53:43,167 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:53:43,168 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 22:53:43,170 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:53:43,170 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 22:55:03,985 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:55:03,985 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 22:55:03,987 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 22:55:03,987 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 23:03:08,342 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 23:03:08,343 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 23:03:08,344 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 23:03:08,344 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 23:06:47,263 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 23:06:47,263 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 23:06:47,264 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 23:06:47,265 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 23:17:08,951 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 23:17:08,951 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 23:17:08,953 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 23:17:08,953 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 23:17:45,233 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 23:17:45,234 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 23:17:45,236 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 23:17:45,236 [Worker-46] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 23:18:01,394 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 23:18:01,394 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 23:18:01,396 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 23:18:01,396 [Worker-45] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 23:18:57,821 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 23:18:57,822 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 23:18:57,823 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 23:18:57,823 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 23:19:04,710 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 23:19:04,710 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 23:19:04,711 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 23:19:04,711 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 23:19:11,251 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 23:19:11,251 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 23:19:11,252 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 23:19:11,253 [Worker-37] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 23:19:43,976 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 23:19:43,976 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 23:19:43,977 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 23:19:43,977 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-21 23:20:16,700 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 23:20:16,700 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-21 23:20:16,703 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-21 23:20:16,704 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 13:23:27,199 [Worker-7] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|http://repo1.maven.org/maven2
+2014-08-22 13:24:45,004 [Worker-7] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|http://repo1.maven.org/maven2 in 77808 ms
+2014-08-22 13:43:47,011 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 13:43:47,011 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 13:43:47,013 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 13:43:47,013 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 13:49:12,630 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 13:49:12,630 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 13:49:12,631 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 13:49:12,632 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 13:51:02,399 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 13:51:02,399 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 13:51:02,401 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 13:51:02,401 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 13:54:11,891 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 13:54:11,891 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 13:54:11,893 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 13:54:11,893 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 14:00:26,596 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:00:26,600 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 14:00:26,604 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:00:26,604 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 14:00:26,734 [Worker-7] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|http://repo1.maven.org/maven2
+2014-08-22 14:00:42,404 [Worker-7] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|http://repo1.maven.org/maven2 in 15671 ms
+2014-08-22 14:01:30,354 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:01:30,355 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 14:01:30,356 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:01:30,356 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 14:17:01,184 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:17:01,184 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 14:17:01,186 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:17:01,186 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 14:21:07,949 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:21:07,949 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 14:21:07,951 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:21:07,951 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 14:21:53,713 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:21:53,713 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 14:21:53,714 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:21:53,714 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 14:23:29,883 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:23:29,883 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 14:23:29,885 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:23:29,885 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 14:24:09,809 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:24:09,810 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 14:24:09,811 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:24:09,811 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 14:25:17,357 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:25:17,357 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 14:25:17,360 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:25:17,360 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 14:28:25,806 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:28:25,807 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 14:28:25,808 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:28:25,808 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 14:28:50,917 [Worker-2] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|http://repo1.maven.org/maven2
+2014-08-22 14:29:07,710 [Worker-2] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|http://repo1.maven.org/maven2 in 16795 ms
+2014-08-22 14:29:25,549 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:29:25,549 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 14:29:25,552 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:29:25,552 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 14:36:17,189 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:36:17,190 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 14:36:17,191 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:36:17,191 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 14:36:59,781 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:36:59,782 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 14:36:59,784 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:36:59,784 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 14:37:59,555 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:37:59,555 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 14:37:59,557 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:37:59,557 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 14:38:11,394 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:38:11,394 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 14:38:11,395 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:38:11,395 [Worker-1] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 14:47:43,399 [New I/O client worker #2-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://repo1.maven.org/maven2/org/apache/opennlp/opennlp-tools/1.5.3/opennlp-tools-1.5.3-sources.jar
+2014-08-22 14:47:48,734 [New I/O client worker #2-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://repo1.maven.org/maven2/org/apache/opennlp/opennlp-tools/1.5.3/opennlp-tools-1.5.3-sources.jar
+2014-08-22 14:47:50,025 [Worker-19] INFO  o.e.m.j.internal.DownloadSourcesJob - Downloaded sources for org.apache.opennlp:opennlp-tools:1.5.3
+2014-08-22 14:47:50,418 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:47:50,419 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 14:47:50,420 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:47:50,420 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 14:59:46,006 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:59:46,007 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 14:59:46,008 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 14:59:46,008 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 15:22:41,248 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:22:41,249 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 15:22:41,250 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:22:41,250 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 15:26:18,682 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:26:18,682 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 15:26:18,684 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:26:18,684 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 15:27:53,156 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:27:53,156 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 15:27:53,158 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:27:53,158 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 15:29:38,230 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:29:38,230 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 15:29:38,232 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:29:38,232 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 15:30:21,496 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:30:21,496 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 15:30:21,498 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:30:21,498 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 15:30:27,660 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:30:27,660 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 15:30:27,663 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:30:27,663 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 15:33:38,247 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:33:38,248 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 15:33:38,249 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:33:38,250 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 15:37:52,518 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:37:52,518 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 15:37:52,519 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:37:52,520 [Worker-31] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 15:39:04,790 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:39:04,791 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 15:39:04,793 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:39:04,794 [Worker-26] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 15:47:02,388 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:47:02,388 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 15:47:02,392 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:47:02,392 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 15:47:42,588 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:47:42,589 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 15:47:42,590 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 15:47:42,591 [Worker-39] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 16:00:29,548 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 16:00:29,549 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 16:00:29,550 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 16:00:29,550 [Worker-40] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 16:03:42,273 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 16:03:42,273 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 16:03:42,275 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 16:03:42,275 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 16:45:27,911 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 16:45:27,911 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 16:45:27,913 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 16:45:27,913 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 16:45:35,416 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 16:45:35,417 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 16:45:35,418 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 16:45:35,418 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 16:46:01,656 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 16:46:01,656 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 16:46:01,658 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 16:46:01,658 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 16:56:07,173 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 16:56:07,174 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 16:56:07,175 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 16:56:07,176 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-22 16:56:19,994 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 16:56:19,994 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-22 16:56:19,996 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-22 16:56:19,996 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 13:25:22,386 [Worker-2] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|http://repo1.maven.org/maven2
+2014-08-28 13:25:26,891 [Worker-2] ERROR o.e.m.c.i.i.nexus.NexusIndexManager - Unable to update index for central|http://repo1.maven.org/maven2
+java.io.IOException: Connection refused: no further information to http://repo1.maven.org/maven2/.index/nexus-maven-repository-index.properties
+	at org.eclipse.m2e.core.internal.index.nexus.AsyncFetcher$PipedErrorInputStream.checkError(AsyncFetcher.java:251) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.AsyncFetcher$PipedErrorInputStream.read(AsyncFetcher.java:257) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at java.io.PipedInputStream.read(PipedInputStream.java:378) ~[na:1.7.0_25]
+	at java.io.InputStream.read(InputStream.java:101) ~[na:1.7.0_25]
+	at java.util.Properties$LineReader.readLine(Properties.java:434) ~[na:1.7.0_25]
+	at java.util.Properties.load0(Properties.java:353) ~[na:1.7.0_25]
+	at java.util.Properties.load(Properties.java:341) ~[na:1.7.0_25]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.downloadIndexProperties(DefaultIndexUpdater.java:457) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.access$100(DefaultIndexUpdater.java:75) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater$IndexAdaptor.setProperties(DefaultIndexUpdater.java:607) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:788) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:135) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.updateRemoteIndex(NexusIndexManager.java:1124) [org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.updateIndex(NexusIndexManager.java:1081) [org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager$1.run(NexusIndexManager.java:658) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.IndexUpdaterJob.run(IndexUpdaterJob.java:71) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54) ~[org.eclipse.core.jobs_3.5.100.v20110404.jar:na]
+Caused by: java.net.ConnectException: Connection refused: no further information to http://repo1.maven.org/maven2/.index/nexus-maven-repository-index.properties
+	at com.ning.http.client.providers.netty.NettyConnectListener.operationComplete(NettyConnectListener.java:83) ~[async-http-client-1.6.3.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.doConnect(NettyAsyncHttpProvider.java:857) ~[async-http-client-1.6.3.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.execute(NettyAsyncHttpProvider.java:731) ~[async-http-client-1.6.3.jar:na]
+	at com.ning.http.client.AsyncHttpClient.executeRequest(AsyncHttpClient.java:484) ~[async-http-client-1.6.3.jar:na]
+	at com.ning.http.client.SimpleAsyncHttpClient.execute(SimpleAsyncHttpClient.java:285) ~[async-http-client-1.6.3.jar:na]
+	at com.ning.http.client.SimpleAsyncHttpClient.get(SimpleAsyncHttpClient.java:202) ~[async-http-client-1.6.3.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.AsyncFetcher.retrieve(AsyncFetcher.java:203) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.downloadIndexProperties(DefaultIndexUpdater.java:452) ~[indexer-core-3.1.0.jar:3.1.0]
+	... 9 common frames omitted
+java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method) ~[na:1.7.0_25]
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:708) ~[na:1.7.0_25]
+	at org.jboss.netty.channel.socket.nio.NioClientSocketPipelineSink$Boss.connect(NioClientSocketPipelineSink.java:384) ~[na:na]
+	at org.jboss.netty.channel.socket.nio.NioClientSocketPipelineSink$Boss.processSelectedKeys(NioClientSocketPipelineSink.java:354) ~[na:na]
+	at org.jboss.netty.channel.socket.nio.NioClientSocketPipelineSink$Boss.run(NioClientSocketPipelineSink.java:276) ~[na:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) ~[na:1.7.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) ~[na:1.7.0_25]
+	at java.lang.Thread.run(Thread.java:724) ~[na:1.7.0_25]
+2014-08-28 14:01:27,375 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 14:01:27,376 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 14:01:27,379 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 14:01:27,391 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 14:22:07,739 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 14:22:07,740 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 14:22:07,741 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 14:22:07,742 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 14:27:49,620 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 14:27:49,620 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 14:27:49,622 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 14:27:49,622 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 14:29:02,259 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 14:29:02,259 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 14:29:02,260 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 14:29:02,260 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 14:30:03,962 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 14:30:03,963 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 14:30:03,964 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 14:30:03,965 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 14:31:41,288 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 14:31:41,288 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 14:31:41,289 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 14:31:41,289 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 14:50:56,896 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 14:50:56,896 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 14:50:56,897 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 14:50:56,897 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 14:53:18,658 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 14:53:18,658 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 14:53:18,660 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 14:53:18,661 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 14:58:26,609 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 14:58:26,609 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 14:58:26,610 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 14:58:26,610 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 15:02:46,663 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 15:02:46,663 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 15:02:46,664 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 15:02:46,664 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 15:04:13,521 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 15:04:13,522 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 15:04:13,523 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 15:04:13,523 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 15:38:32,781 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 15:38:32,781 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 15:38:32,782 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 15:38:32,782 [Worker-36] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 15:43:30,945 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 15:43:30,945 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 15:43:30,946 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 15:43:30,946 [Worker-38] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 15:45:29,594 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 15:45:29,594 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 15:45:29,595 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 15:45:29,595 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 15:45:55,168 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 15:45:55,168 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 15:45:55,169 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 15:45:55,169 [Worker-44] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 15:50:39,660 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 15:50:39,661 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 15:50:39,663 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 15:50:39,663 [Worker-41] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 16:01:16,237 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 16:01:16,237 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 16:01:16,238 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 16:01:16,238 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 16:03:01,365 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 16:03:01,365 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 16:03:01,366 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 16:03:01,367 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 16:03:14,171 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 16:03:14,172 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 16:03:14,173 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 16:03:14,173 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 16:04:13,882 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 16:04:13,882 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 16:04:13,883 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 16:04:13,883 [Worker-51] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 16:11:09,395 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 16:11:09,396 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 16:11:09,397 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 16:11:09,397 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 16:11:43,347 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 16:11:43,347 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 16:11:43,348 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 16:11:43,348 [Worker-47] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 16:15:38,021 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 16:15:38,021 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 16:15:38,022 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 16:15:38,022 [Worker-56] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 16:32:15,032 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 16:32:15,033 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 16:32:15,034 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 16:32:15,034 [Worker-57] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 16:49:55,912 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 16:49:55,913 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 16:49:55,913 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 16:49:55,914 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-28 16:53:33,050 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 16:53:33,051 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-28 16:53:33,052 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-28 16:53:33,052 [Worker-60] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-29 14:44:23,320 [Worker-0] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|http://repo1.maven.org/maven2
+2014-08-29 14:44:26,210 [Worker-0] ERROR o.e.m.c.i.i.nexus.NexusIndexManager - Unable to update index for central|http://repo1.maven.org/maven2
+java.io.IOException: null to http://repo1.maven.org/maven2/.index/nexus-maven-repository-index.properties
+	at org.eclipse.m2e.core.internal.index.nexus.AsyncFetcher$PipedErrorInputStream.checkError(AsyncFetcher.java:251) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.AsyncFetcher$PipedErrorInputStream.read(AsyncFetcher.java:257) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at java.io.PipedInputStream.read(PipedInputStream.java:378) ~[na:1.7.0_25]
+	at java.io.InputStream.read(InputStream.java:101) ~[na:1.7.0_25]
+	at java.util.Properties$LineReader.readLine(Properties.java:434) ~[na:1.7.0_25]
+	at java.util.Properties.load0(Properties.java:353) ~[na:1.7.0_25]
+	at java.util.Properties.load(Properties.java:341) ~[na:1.7.0_25]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.downloadIndexProperties(DefaultIndexUpdater.java:457) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.access$100(DefaultIndexUpdater.java:75) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater$IndexAdaptor.setProperties(DefaultIndexUpdater.java:607) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:788) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:135) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.updateRemoteIndex(NexusIndexManager.java:1124) [org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.updateIndex(NexusIndexManager.java:1081) [org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager$1.run(NexusIndexManager.java:658) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.IndexUpdaterJob.run(IndexUpdaterJob.java:71) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54) ~[org.eclipse.core.jobs_3.5.100.v20110404.jar:na]
+Caused by: java.net.ConnectException: null to http://repo1.maven.org/maven2/.index/nexus-maven-repository-index.properties
+	at com.ning.http.client.providers.netty.NettyConnectListener.operationComplete(NettyConnectListener.java:83) ~[async-http-client-1.6.3.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.doConnect(NettyAsyncHttpProvider.java:857) ~[async-http-client-1.6.3.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.execute(NettyAsyncHttpProvider.java:731) ~[async-http-client-1.6.3.jar:na]
+	at com.ning.http.client.AsyncHttpClient.executeRequest(AsyncHttpClient.java:484) ~[async-http-client-1.6.3.jar:na]
+	at com.ning.http.client.SimpleAsyncHttpClient.execute(SimpleAsyncHttpClient.java:285) ~[async-http-client-1.6.3.jar:na]
+	at com.ning.http.client.SimpleAsyncHttpClient.get(SimpleAsyncHttpClient.java:202) ~[async-http-client-1.6.3.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.AsyncFetcher.retrieve(AsyncFetcher.java:203) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.downloadIndexProperties(DefaultIndexUpdater.java:452) ~[indexer-core-3.1.0.jar:3.1.0]
+	... 9 common frames omitted
+Caused by: java.nio.channels.UnresolvedAddressException: null
+	at sun.nio.ch.Net.checkAddress(Net.java:127) ~[na:1.7.0_25]
+	at sun.nio.ch.SocketChannelImpl.connect(SocketChannelImpl.java:613) ~[na:1.7.0_25]
+	at org.jboss.netty.channel.socket.nio.NioClientSocketPipelineSink.connect(NioClientSocketPipelineSink.java:140) ~[netty-3.2.4.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioClientSocketPipelineSink.eventSunk(NioClientSocketPipelineSink.java:103) ~[netty-3.2.4.Final.jar:na]
+	at org.jboss.netty.handler.codec.oneone.OneToOneEncoder.handleDownstream(OneToOneEncoder.java:60) ~[netty-3.2.4.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpClientCodec.handleDownstream(HttpClientCodec.java:82) ~[netty-3.2.4.Final.jar:na]
+	at org.jboss.netty.handler.stream.ChunkedWriteHandler.handleDownstream(ChunkedWriteHandler.java:114) ~[netty-3.2.4.Final.jar:na]
+	at org.jboss.netty.channel.Channels.connect(Channels.java:541) ~[netty-3.2.4.Final.jar:na]
+	at org.jboss.netty.channel.AbstractChannel.connect(AbstractChannel.java:218) ~[netty-3.2.4.Final.jar:na]
+	at org.jboss.netty.bootstrap.ClientBootstrap.connect(ClientBootstrap.java:227) ~[netty-3.2.4.Final.jar:na]
+	at org.jboss.netty.bootstrap.ClientBootstrap.connect(ClientBootstrap.java:188) ~[netty-3.2.4.Final.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.doConnect(NettyAsyncHttpProvider.java:838) ~[async-http-client-1.6.3.jar:na]
+	... 15 common frames omitted
+2014-08-29 15:09:44,091 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-29 15:09:44,092 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-29 15:09:44,114 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-29 15:09:44,114 [Worker-9] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-29 16:08:27,685 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-29 16:08:27,685 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-29 16:08:27,686 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-29 16:08:27,686 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-08-29 16:09:06,229 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-29 16:09:06,230 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-08-29 16:09:06,231 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-08-29 16:09:06,231 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-05 15:39:48,603 [Worker-2] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|http://repo1.maven.org/maven2
+2014-09-05 15:44:02,531 [Worker-2] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updated index for repository: central|http://repo1.maven.org/maven2 in 253931 ms
+2014-09-12 13:49:58,129 [Worker-5] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|http://repo1.maven.org/maven2
+2014-09-12 13:51:08,144 [Worker-5] ERROR o.e.m.c.i.i.nexus.NexusIndexManager - Unable to update index for central|http://repo1.maven.org/maven2
+java.io.IOException: No response received after 60000
+	at org.eclipse.m2e.core.internal.index.nexus.AsyncFetcher$PipedErrorInputStream.checkError(AsyncFetcher.java:251) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.AsyncFetcher$PipedErrorInputStream.read(AsyncFetcher.java:259) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at java.io.PipedInputStream.read(PipedInputStream.java:378) ~[na:1.7.0_25]
+	at java.io.InputStream.read(InputStream.java:101) ~[na:1.7.0_25]
+	at java.util.Properties$LineReader.readLine(Properties.java:434) ~[na:1.7.0_25]
+	at java.util.Properties.load0(Properties.java:353) ~[na:1.7.0_25]
+	at java.util.Properties.load(Properties.java:341) ~[na:1.7.0_25]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.downloadIndexProperties(DefaultIndexUpdater.java:457) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.access$100(DefaultIndexUpdater.java:75) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater$IndexAdaptor.setProperties(DefaultIndexUpdater.java:607) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:788) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:135) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.updateRemoteIndex(NexusIndexManager.java:1124) [org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.updateIndex(NexusIndexManager.java:1081) [org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager$1.run(NexusIndexManager.java:658) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.IndexUpdaterJob.run(IndexUpdaterJob.java:71) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54) ~[org.eclipse.core.jobs_3.5.100.v20110404.jar:na]
+java.util.concurrent.TimeoutException: No response received after 60000
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider$ReaperFuture.run(NettyAsyncHttpProvider.java:1773) ~[na:na]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471) ~[na:1.7.0_25]
+	at java.util.concurrent.FutureTask$Sync.innerRunAndReset(FutureTask.java:351) ~[na:1.7.0_25]
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:178) ~[na:1.7.0_25]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178) ~[na:1.7.0_25]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293) ~[na:1.7.0_25]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) ~[na:1.7.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) ~[na:1.7.0_25]
+	at java.lang.Thread.run(Thread.java:724) ~[na:1.7.0_25]
+2014-09-12 13:58:59,471 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 13:58:59,472 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 13:58:59,474 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 13:58:59,493 [Worker-3] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 13:59:04,767 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 13:59:04,767 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 13:59:04,768 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 13:59:04,768 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 14:05:40,397 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:05:40,397 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 14:05:40,399 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:05:40,399 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 14:09:55,324 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:09:55,324 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 14:09:55,326 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:09:55,326 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 14:11:02,177 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:11:02,177 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 14:11:02,178 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:11:02,178 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 14:28:27,658 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:28:27,658 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 14:28:27,659 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:28:27,659 [Worker-12] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 14:28:48,036 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:28:48,036 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 14:28:48,037 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:28:48,037 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 14:28:56,746 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:28:56,746 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 14:28:56,748 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:28:56,748 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 14:34:57,163 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:34:57,163 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 14:34:57,164 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:34:57,164 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 14:35:40,378 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:35:40,379 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 14:35:40,380 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:35:40,380 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 14:43:58,804 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:43:58,804 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 14:43:58,806 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:43:58,806 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 14:45:57,812 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:45:57,813 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 14:45:57,815 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:45:57,815 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 14:56:02,915 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:56:02,915 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 14:56:02,918 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:56:02,918 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 14:57:49,609 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:57:49,609 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 14:57:49,610 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 14:57:49,610 [Worker-33] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 15:02:03,151 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 15:02:03,152 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 15:02:03,153 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 15:02:03,153 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 15:26:33,647 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 15:26:33,647 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 15:26:33,649 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 15:26:33,649 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 15:27:12,272 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 15:27:12,272 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 15:27:12,273 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 15:27:12,273 [Worker-42] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 15:56:44,922 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 15:56:44,923 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 15:56:44,924 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 15:56:44,924 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 15:59:32,785 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 15:59:32,785 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 15:59:32,786 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 15:59:32,786 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 16:01:32,773 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:01:32,774 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 16:01:32,774 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:01:32,775 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 16:02:14,938 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:02:14,938 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 16:02:14,940 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:02:14,940 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 16:03:11,936 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:03:11,936 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 16:03:11,937 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:03:11,938 [Worker-43] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 16:03:15,083 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:03:15,083 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 16:03:15,084 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:03:15,084 [Worker-52] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 16:11:41,787 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:11:41,788 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 16:11:41,789 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:11:41,789 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 16:11:56,185 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:11:56,185 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 16:11:56,186 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:11:56,186 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 16:12:24,265 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:12:24,265 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 16:12:24,266 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:12:24,266 [Worker-48] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 16:12:33,895 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:12:33,895 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 16:12:33,896 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:12:33,897 [Worker-54] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 16:13:28,770 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:13:28,770 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 16:13:28,771 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:13:28,771 [Worker-55] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 16:21:29,199 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:21:29,199 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 16:21:29,200 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:21:29,200 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 16:21:49,171 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:21:49,171 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 16:21:49,172 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:21:49,172 [Worker-53] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 16:38:53,755 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:38:53,756 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 16:38:53,757 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:38:53,757 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 16:39:23,499 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:39:23,499 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 16:39:23,500 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:39:23,501 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 16:40:15,653 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:40:15,653 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 16:40:15,654 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:40:15,654 [Worker-63] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 16:40:42,601 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:40:42,602 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 16:40:42,602 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:40:42,603 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 16:40:58,970 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:40:58,970 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 16:40:58,971 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:40:58,971 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 16:41:22,195 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:41:22,195 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 16:41:22,196 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:41:22,196 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 16:41:46,201 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:41:46,202 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 16:41:46,203 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:41:46,203 [Worker-65] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 16:42:10,231 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:42:10,231 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 16:42:10,232 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 16:42:10,232 [Worker-64] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 17:41:09,596 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 17:41:09,596 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 17:41:09,597 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 17:41:09,597 [Worker-61] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-12 17:44:08,016 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 17:44:08,016 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-12 17:44:08,017 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-12 17:44:08,017 [Worker-69] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 13:54:51,934 [Worker-1] INFO  o.e.m.c.i.i.nexus.NexusIndexManager - Updating index for repository: central|http://repo1.maven.org/maven2
+2014-09-13 13:55:09,983 [Worker-1] ERROR o.e.m.c.i.i.nexus.NexusIndexManager - Unable to update index for central|http://repo1.maven.org/maven2
+java.io.IOException: Connect times out
+	at org.eclipse.m2e.core.internal.index.nexus.AsyncFetcher$PipedErrorInputStream.checkError(AsyncFetcher.java:251) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.AsyncFetcher$PipedErrorInputStream.read(AsyncFetcher.java:257) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at java.io.PipedInputStream.read(PipedInputStream.java:378) ~[na:1.7.0_25]
+	at java.io.InputStream.read(InputStream.java:101) ~[na:1.7.0_25]
+	at java.util.Properties$LineReader.readLine(Properties.java:434) ~[na:1.7.0_25]
+	at java.util.Properties.load0(Properties.java:353) ~[na:1.7.0_25]
+	at java.util.Properties.load(Properties.java:341) ~[na:1.7.0_25]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.downloadIndexProperties(DefaultIndexUpdater.java:457) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.access$100(DefaultIndexUpdater.java:75) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater$IndexAdaptor.setProperties(DefaultIndexUpdater.java:607) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:788) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.fetchAndUpdateIndex(DefaultIndexUpdater.java:135) ~[indexer-core-3.1.0.jar:3.1.0]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.updateRemoteIndex(NexusIndexManager.java:1124) [org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager.updateIndex(NexusIndexManager.java:1081) [org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.NexusIndexManager$1.run(NexusIndexManager.java:658) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.IndexUpdaterJob.run(IndexUpdaterJob.java:71) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54) ~[org.eclipse.core.jobs_3.5.100.v20110404.jar:na]
+Caused by: java.net.ConnectException: Connect times out
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.doConnect(NettyAsyncHttpProvider.java:853) ~[async-http-client-1.6.3.jar:na]
+	at com.ning.http.client.providers.netty.NettyAsyncHttpProvider.execute(NettyAsyncHttpProvider.java:731) ~[async-http-client-1.6.3.jar:na]
+	at com.ning.http.client.AsyncHttpClient.executeRequest(AsyncHttpClient.java:484) ~[async-http-client-1.6.3.jar:na]
+	at com.ning.http.client.SimpleAsyncHttpClient.execute(SimpleAsyncHttpClient.java:285) ~[async-http-client-1.6.3.jar:na]
+	at com.ning.http.client.SimpleAsyncHttpClient.get(SimpleAsyncHttpClient.java:202) ~[async-http-client-1.6.3.jar:na]
+	at org.eclipse.m2e.core.internal.index.nexus.AsyncFetcher.retrieve(AsyncFetcher.java:203) ~[org.eclipse.m2e.core_1.0.200.20111228-1245.jar:na]
+	at org.apache.maven.index.updater.DefaultIndexUpdater.downloadIndexProperties(DefaultIndexUpdater.java:452) ~[indexer-core-3.1.0.jar:3.1.0]
+	... 9 common frames omitted
+2014-09-13 14:00:10,056 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:00:10,056 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 14:00:10,059 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:00:10,083 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 14:00:34,124 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:00:34,124 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 14:00:34,126 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:00:34,126 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 14:00:47,032 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:00:47,033 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 14:00:47,034 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:00:47,034 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 14:00:55,539 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:00:55,540 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 14:00:55,541 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:00:55,541 [Worker-10] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 14:01:06,563 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:01:06,564 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 14:01:06,565 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:01:06,565 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 14:03:31,122 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:03:31,123 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 14:03:31,124 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:03:31,124 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 14:03:40,446 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:03:40,446 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 14:03:40,448 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:03:40,448 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 14:03:57,553 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:03:57,554 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 14:03:57,869 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:03:57,870 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 14:04:00,480 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:04:00,480 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 14:04:00,481 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:04:00,481 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 14:04:20,979 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:04:20,979 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 14:04:20,980 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:04:20,981 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 14:04:39,886 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:04:39,886 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 14:04:39,887 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:04:39,887 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 14:04:45,096 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:04:45,097 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 14:04:45,098 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:04:45,098 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 14:04:49,289 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:04:49,289 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 14:04:49,290 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:04:49,290 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 14:04:51,751 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:04:51,752 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 14:04:51,755 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:04:51,755 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 14:04:59,322 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:04:59,323 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 14:04:59,324 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:04:59,324 [Worker-11] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 14:05:02,356 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:05:02,356 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 14:05:02,358 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:05:02,358 [Worker-16] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 14:05:05,460 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:05:05,460 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 14:05:05,462 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 14:05:05,463 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 17:32:11,050 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 17:32:11,050 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 17:32:11,051 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 17:32:11,051 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 17:32:22,158 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 17:32:22,158 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 17:32:22,159 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 17:32:22,159 [Worker-15] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 17:32:33,843 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 17:32:33,843 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 17:32:33,844 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 17:32:33,845 [Worker-20] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 17:33:14,492 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 17:33:14,492 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 17:33:14,493 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 17:33:14,493 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 17:33:36,494 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 17:33:36,494 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 17:33:36,496 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 17:33:36,496 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 17:33:56,224 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 17:33:56,224 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 17:33:56,226 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 17:33:56,226 [Worker-19] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 17:36:03,414 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 17:36:03,414 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 17:36:03,415 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 17:36:03,415 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 17:42:38,963 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 17:42:38,964 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 17:42:38,965 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 17:42:38,965 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 17:42:49,783 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 17:42:49,783 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 17:42:49,784 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 17:42:49,784 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 19:05:47,013 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 19:05:47,013 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 19:05:47,014 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 19:05:47,014 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 19:06:17,884 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 19:06:17,884 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 19:06:17,885 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 19:06:17,885 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 19:06:33,087 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 19:06:33,087 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 19:06:33,088 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 19:06:33,088 [Worker-30] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 19:07:39,789 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 19:07:39,789 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 19:07:39,790 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 19:07:39,790 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources
+2014-09-13 19:45:04,559 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 19:45:04,559 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\main\resources
+2014-09-13 19:45:04,560 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2014-09-13 19:45:04,560 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\ATOM-cse\res\Gitanjali\sat\src\test\resources

@@ -1,6 +1,12 @@
 package com.project.traceability.utils;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Constants {
+	
+	public static List<String> removableTerms = new ArrayList<String>();
 	
 	public Constants(){
 		
@@ -68,5 +74,12 @@ public class Constants {
             return artefactSubElementType;
         }
     }
+	
+	public static List<String> getRemovableTerms(){
+		String[] terms = {"system", "details", "company", "information", "requirement", "organization", "database"};
+		removableTerms.addAll(Arrays.asList(terms));
+		return removableTerms;
+	}
+	
 
 }

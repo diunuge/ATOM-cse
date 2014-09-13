@@ -9,6 +9,8 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
+import opennlp.tools.util.InvalidFormatException;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -77,7 +79,6 @@ public class RequirementsManger {
 						requirement = new RequirementModel(id, name, title,
 								content, priority, type);
 						requirementAretefactElements.add(requirement);
-						System.out.println(requirementAretefactElements.get(temp1).getName());
 					}
 
 					NodeList intraConnectionsList = UMLDoc
@@ -90,8 +91,13 @@ public class RequirementsManger {
 
 			e.printStackTrace();
 		}
-		
-		ExtractClass.extractClass(requirementAretefactElements);
+		ExtractInfo.run();
+		/*try {
+			//ExtractClass.extractClass(requirementAretefactElements);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
 	}
 
 	public static void readIntraConnectionsXML(NodeList intraConnectionsList) {

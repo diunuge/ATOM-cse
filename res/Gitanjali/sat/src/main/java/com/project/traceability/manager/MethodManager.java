@@ -28,7 +28,6 @@ public class MethodManager {
 		
 		Iterator<Entry<ArtefactElement, List<ArtefactSubElement>>> UMLIterator = UMLattributeArtefactMap
 				.entrySet().iterator();
-		//boolean isCompare = false;
 		while (UMLIterator.hasNext()) {
 			Map.Entry UMLPairs = UMLIterator.next();
 			ArtefactElement UMLArtefactElement = (ArtefactElement) UMLPairs
@@ -60,6 +59,7 @@ public class MethodManager {
 									j--;
 									break;
 								}
+								
 								else if(checkParameters(((MethodModel)UMLAttributeElements.get(i)).getParameters(), 
 									((MethodModel)sourceAttributeElements.get(j)).getParameters())){
 									relationNodes.add(UMLAttributeElements.get(i).getSubElementId());
@@ -93,7 +93,6 @@ public class MethodManager {
 			}
 			UMLIterator.remove();
 		}
-		//RelationManager.createXML(relationNodes);
 		return relationNodes;
 	}
 
@@ -102,17 +101,36 @@ public class MethodManager {
 		int count = 0;
 		if(UMLParameters == null || sourceCodeParameters == null)
 			return false;
-		else if(UMLParameters.size() == sourceCodeParameters.size()){
+		else {
 			for(int i = 0; i < UMLParameters.size(); i++){
 				for(int j = 0; j < sourceCodeParameters.size(); j++){
-					if(UMLParameters.get(i).getName().equals(sourceCodeParameters.get(j).getName()) &&
+					if(UMLParameters.get(i).getName().trim().equals(sourceCodeParameters.get(j).getName().trim()) &&
 							UMLParameters.get(i).getVariableType().equals(sourceCodeParameters.get(j).getVariableType())){
+						UMLParameters.remove(i);
+						i--;
+						sourceCodeParameters.remove(j);
+						j--;
 						count++;
+						break;
 					}
 				}
 			}
+			if(UMLParameters.size() > 0 || sourceCodeParameters.size() > 0){
+				System.out.println("There are some conflicts among parameters of methods.");
+				if (UMLParameters.size() > 0) {
+					System.out.println("UMLArtefactFile has following different parameters");
+					for(ParameterModel model : UMLParameters)
+						System.out.println(((ParameterModel)model).getName());
+				}
+				
+				if (sourceCodeParameters.size() > 0) {
+					System.out.println("SourceCodeArtefactFile has following different parameters");
+					for(ParameterModel model : sourceCodeParameters)
+						System.out.println(((ParameterModel)model).getName());
+				}
+			}
 		}
-		if(count == UMLParameters.size())
+		if(UMLParameters.size() == 0 && sourceCodeParameters.size() == 0)
 			isEqual = true;
 		return isEqual;
 	}

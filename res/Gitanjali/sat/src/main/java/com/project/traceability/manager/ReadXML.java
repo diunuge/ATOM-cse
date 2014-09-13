@@ -19,16 +19,16 @@ public class ReadXML {
 		    Map<String, ArtefactElement> UMLAretefactElements = UMLArtefactManager.UMLAretefactElements;
 		    Map<String, ArtefactElement> sourceCodeAretefactElements = SourceCodeArtefactManager.sourceCodeAretefactElements;
 		   		    
-		    GraphDB graphDB = new GraphDB();
+		   /* GraphDB graphDB = new GraphDB();
 	        graphDB.initiateGraphDB();
 	        graphDB.addNodeToGraphDB(sourceCodeAretefactElements);
-		    graphDB.addNodeToGraphDB(UMLAretefactElements);
+		    graphDB.addNodeToGraphDB(UMLAretefactElements);*/
 		   // graphDB.drawGraph();
 	        
 	        //SourceCodeArtefactManager.manageArtefactSubElements();
-			List<String> relationNodes = ClassCompareManager.compareClassNames();
+			List<String> relationNodes = UMLSourceClassManager.compareClassNames();
 			//List<String> relationNodes = ClassCompareManager.relationNodes;
-			graphDB.addRelationTOGraphDB(relationNodes);
+			//graphDB.addRelationTOGraphDB(relationNodes);
 			//graphDB.drawGraph();
 			
 			//List<String> relationNodes = ClassCompareManager.compareClassNames();
